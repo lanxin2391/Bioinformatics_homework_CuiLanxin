@@ -1,0 +1,87 @@
+{
+  "success": true,
+  "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+  "events": [
+    {
+      "event_type": "api_call",
+      "path": "/llm/openrouter_verified",
+      "method": "GET",
+      "total_ms": 63,
+      "backend_ms": 23.9,
+      "case_id": null,
+      "experiment": null,
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:34:12.144+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/3NMMp49Q4XdEkPNSuLetECxO",
+      "method": "GET",
+      "total_ms": 120,
+      "backend_ms": 69.7,
+      "case_id": null,
+      "experiment": null,
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:34:12.383+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:39:44.350+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/import/demo",
+      "method": "POST",
+      "total_ms": 2165,
+      "backend_ms": 2098.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": null,
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:40:15.596+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/3NMMp49Q4XdEkPNSuLetECxO",
+      "method": "GET",
+      "total_ms": 23,
+      "backend_ms": 2,
+      "case_id": "course_microbiome_16s",
+      "experiment": null,
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:40:15.681+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/3NMMp49Q4XdEkPNSuLetECxO/m16s_course",
+      "method": "GET",
+      "total_ms": 27,
+      "backend_ms": 0.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": "m16s_course",
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:40:16.063+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:40:30.383+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "3NMMp49Q4XdEkPNSuLetECxO",
+      "role": "local",
+      "ts": "2026-08-30T19:40:51.487+0800"
+    }
+  ]
+}
