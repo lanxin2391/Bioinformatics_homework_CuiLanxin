@@ -1,0 +1,75 @@
+# AI 验证日志 — Week 4 Q2（FASTQ → 分析流程）
+
+日期：2026-09-17
+工具：MiniMax-M3 + FastQC 0.12.1（已装于 E:\worksw\FastQC）
+数据：`D:\Grade3\swxxx\week4\Homework\for_student\data\demo_fastq\` 下 S01 synthetic PE FASTQ（120 × 80 bp，仅作 QC 演示）
+FastQC 输出：`fastqc_results/R1_fastqc.html, R1_fastqc.zip, R2_fastqc.html, R2_fastqc.zip`
+
+---
+
+## 决策背景
+
+作业硬性要求：用 demo 数据；FastQC 可选但已装就跑；不要求做全比对；最少解释 4 个 QC 指标；plan-first prompt 给完整 8 步流程；AI-audit 表必交。
+
+8 步：FASTQ QC → 参考基因组 → 比对 → 后处理 → 下游 → 注释 → 可视化 → 解读
+
+---
+
+## 我用过的 Prompt
+
+**Prompt — plan-first 8 步流程**
+> "假设我做 WGS 的人类样本分析。请列出完整 8 步流程：FASTQ QC → 参考基因组 → 比对 → 比对后处理 → 下游分析 → 注释 → 可视化 → 解读。每步给具体软件、命令、参数、文件格式、注意事项。"
+
+---
+
+## 接受的建议（含核查依据）
+
+| # | AI 推荐 | 核查来源 | 是否接受 |
+|---|---|---|---|
+| 1 | 参考基因组 GRCh38.p14 (GCA_000001405.15) | Ensembl FTP, Ensembl 110 release notes | 接受（当前 release） |
+| 2 | bwa 0.7.17+ / BWA-MEM | Heng Li BWA 手册 bio-bwa.sourceforge.net | 接受（短读长金标准） |
+| 3 | fastp 替代 Trimmomatic | Chen et al. 2018, fastp 论文 | 接受（更现代，整合度高） |
+| 4 | Picard MarkDuplicates | broadinstitute.github.io/picard | 接受（指定 3.x 版本） |
+| 5 | GATK 4.x BQSR + HaplotypeCaller | broadinstitute.org/gatk | 接受（3.x 已 EOL） |
+| 6 | Ensembl VEP | ensembl.org/info/docs/tools/vep | 接受（ClinVar/gnomAD/CADD 插件可用） |
+| 7 | IGV + UCSC Genome Browser | software.broadinstitute.org/software/igv | 接受 |
+
+## 驳回 / 修改的建议
+
+| # | AI 建议 | 驳回 / 修改原因 |
+|---|---|---|
+| A | AI 建议"如果 FASTQ 来自 pre-trimmed 来源，可跳过 trim" | 作业 demo 的 FASTQC 已显示 Adapter Content FAIL（AGATCGGAAGAGC）。驳回一刀切：保留 trim 步骤。 |
+| B | AI 给的 BQSR 已知位点列表只列了 Mills | 补上：标准 Bundle（Millie1000G omni + 1000G phase1 + dbSNP），避免 Mills 单列表过时 |
+
+---
+
+## FastQC 实际结果（demo S01 PE FASTQ）
+
+**R1**: PASS×3, WARN×2, FAIL×4
+- FAIL: Per base sequence content, Per sequence GC content, Overrepresented sequences, Adapter Content
+- WARN: Per base sequence content（cycle 52+ 后 Phred 跌至 ~12）, Per sequence GC content
+- 10% reads 高 GC 肩峰（~78%）—— 污染 spike
+
+**R2**: PASS×4, WARN×4, FAIL×1
+- FAIL: Adapter Content
+- WARN: Per base sequence content, Per sequence GC content, Overrepresented sequences
+
+（两个文件都是合成数据，\"planted QC traps\"，不是真实测序结果。）
+
+---
+
+## 已承认的局限
+
+- Demo FASTQ 只有 120 reads × 80 bp，远低于真实 WGS 文库（>10⁷ reads × 150 bp）。
+  所有 QC FAIL 信号都是合成器 planted 的，不能据此对真实仪器做诊断。
+- 跑了 FastQC 但**没有跑比对和下游**（作业允许），所以 VCF、annotation、IGV track 都没真正生成。
+- 参考基因组 GRCh38.p14 是 2024 当前 release；若用 T2T-CHM13 (v2.0) 需重新生成 BWA index。
+- bwa 0.7.17+ 已多年稳定，但 long-read 场景下应改用 minimap2。
+
+---
+
+## 我会问领域专家的开放问题
+
+- 临床 WGS 流程是否真的用 GATK？是否有医院用 DRAGEN / Sentieon？
+- BQSR 是否对外显子组 / 低 coverage 样本仍然必需？
+- VEP 插件（ClinVar / gnomAD）多久更新一次？跟 dbSNP 版本号对齐吗？

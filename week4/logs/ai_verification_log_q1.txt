@@ -1,0 +1,77 @@
+# AI 验证日志 — Week 4 Q1（方法策略）
+
+日期：2026-09-17
+工具：MiniMax-M3 + 手动文献检索
+问题：在疾病背景下剖析 Gene X 上调的机制，选对基因组学方法。
+
+---
+
+## 决策背景
+
+生物学问题：Gene X 在疾病 vs 对照中上调，可能原因包括调控变异、染色质开放性改变、
+TF/组蛋白改变、DNA 甲基化改变、增强子–启动子接触改变。可选方法：
+WGS/WES、ATAC-seq、ChIP-seq/CUT&Tag/CUT&RUN、WGBS/EM-seq、CAGE/RAMPAGE、Hi-C/Micro-C、
+RNA-seq、MPRA、CRISPR 扰动。
+
+AI 之前的策略（第 1-4 步）：ATAC-seq → H3K27ac CUT&Tag 于峰 → 按结果分支
+（机制特异）→ CRISPRi 于候选增强子。
+
+---
+
+## 我用过的 Prompt
+
+**Prompt 1** —— 策略批评
+> "I'm planning to dissect why Gene X is higher in disease tissue. My first-pass design
+> is: ATAC-seq → H3K27ac CUT&Tag → H3K4me1 CUT&Tag → Micro-C for 3D → WGBS for
+> methylation → WGS+WES for variants → MPRA → CRISPRi at the candidate enhancer. What
+> would you change, and why? Be specific about which step is redundant or underpowered
+> for which mechanism."
+
+**Prompt 2** —— 技术对比
+> "Compare CUT&Tag vs CUT&RUN vs ChIP-seq for H3K27ac on primary tissue with 50,000-100,000
+> cells per sample. Cite input cell thresholds and the impact on peak calling."
+
+**Prompt 3** —— 扰动选择
+> "For testing whether an enhancer is causally required for Gene X in primary cells,
+> compare CRISPRi (dCas9-KRAB), CRISPRa (dCas9-VPR), and enhancer deletion by dual-guide
+> Cas9. Which gives the cleanest causal readout, and what controls are required?"
+
+---
+
+## 接受的建议（含核查依据）
+
+| # | AI 建议 | 核查来源 | 是否接受 |
+|---|---|---|---|
+| 1 | 低投入 H3K27ac 用 CUT&Tag 替代 ChIP-seq | Kaya-Okur 2019 *Nat Commun*; Janssens 2018 *Nat Commun* | 接受（默认），broad peak 时回退 ChIP-seq |
+| 2 | CUT&Tag 加 IgG / 输入对照 | ENCODE CUT&Tag 标准；Kaya-Okur 2019 suppl. | 接受 |
+| 3 | MPRA 优于 STARR-seq（小规模候选） | Gordon 2020 *Nat Methods*；MPRAsnakeflow 文档 | 接受 |
+| 4 | 原代细胞首选 CRISPRi 而非增强子敲除 | Thakore 2015 *Nat Methods*；Fulco 2016 *Nat Genet* | 接受，敲除作为正交验证 |
+| 5 | Micro-C 优于 Hi-C 做亚 kb 环 | Hsieh 2020 *Nat Methods*；4DN 数据门户 | 接受，条件性（仅当上层无信息时） |
+
+## 驳回 / 修改的建议
+
+| # | AI 建议 | 驳回 / 修改原因 |
+|---|---|---|
+| A | "H3K27ac 一律用 ChIP-seq 而非 CUT&Tag" | AI 一刀切；我们的投入细胞数下 CUT&Tag 可行，broad peak 问题用重复 + IgG 即可。修改：保留 CUT&Tag 为默认，ChIP-seq 作为备选。 |
+| B | "跳过 RNA-seq —— 表达已是输入" | 驳回：组织匹配的 RNA-seq 是反应变量也是细胞类型组成的合理性检查，必须保留。 |
+| C | "优先做增强子敲除而非 CRISPRi" | AI 倾向敲除；原代细胞敲除效率参差。修改：CRISPRi 为主，敲除作为正交验证。 |
+
+---
+
+## 已承认的局限
+
+- ATAC-seq 对细胞类型组成敏感；bulk ATAC 峰差异可能反映细胞混合比例变化，
+  而非细胞内调控变化。若疾病组织异质性高，需 scATAC-seq 或仔细反卷积。
+- H3K27ac broad-mark 通过 CUT&Tag 量化仍在发展中；实验室间结果差异较大。
+  在进入第 3 步前需 ≥ 2/3 重复一致性。
+- MPRA 在 episomal 或整合背景下测变异活性，可能与原生染色质不一致；
+  同位点 in locus MPRA 或候选增强子的 CRISPRi 平铺是正交因果测试。
+- CRISPRi 需 dCas9-KRAB 递送（慢病毒或转染），并设非靶向 + 安全港对照。
+
+---
+
+## 我会问领域专家的开放问题
+
+- 疾病 vs 对照组织的细胞类型组成？这决定 bulk vs scATAC-seq。
+- 是否有现成的 TF ChIP-seq / CUT&Tag 数据用于候选 TF？
+- 候选调控区是否有已知 eQTL 或 GWAS 变异重叠？

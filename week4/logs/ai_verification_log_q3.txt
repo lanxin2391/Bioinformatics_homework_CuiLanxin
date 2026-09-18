@@ -1,0 +1,64 @@
+# AI 验证日志 — Week 4 Q3（多组学调控假说）
+
+日期：2026-09-17
+工具：MiniMax-M3
+作业：Q3 多组学证据合并成 Gene Y 调控假说
+
+---
+
+## 决策背景
+
+5 个 omics 层（ATAC-seq、H3K27ac ChIP/CUT&Tag、DNA 甲基化、Hi-C/Micro-C、RNA-seq）来自同一生物学条件，对 Gene Y 上游候选调控区。判断该区是否是 Gene Y 的合理增强子。
+
+---
+
+## 我用过的 Prompt
+
+**Prompt — 三栏拆分**
+> "我有 Gene Y 上游候选调控区的 5 个 omics 数据（ATAC-seq、H3K27ac ChIP-seq/CUT&Tag、WGBS 甲基化、Hi-C/Micro-C、RNA-seq），同一生物学条件。逐层帮我分开：(1) 直接观测（数据本身显示什么，不解读）、(2) 生物解读（这意味着什么机制）、(3) 缺失证据（还需要什么才能下结论）。"
+
+---
+
+## 接受的建议（含核查依据）
+
+| # | AI 建议 | 核查来源 | 决定 |
+|---|---|---|---|
+| 1 | 5 层都用「直接观测 / 解读 / 缺失证据」三栏拆 | ENCODE guidelines（每个 assay 都有 "what it measures" / "what it doesn't"） | 接受 |
+| 2 | 提示「以上五层都满足但都只是相关性；只有扰动才能断因果」 | ENCODE integrative analysis docs；CRISPRi 在增强子因果测试中的金标准（Fulco et al. 2016） | 接受 |
+| 3 | 用 CRISPRi (dCas9-KRAB) 作为首选因果测试 | Thakore et al. 2015 *Nat Methods*；Fulco et al. 2016 *Nat Genet* | 接受 |
+| 4 | 替代解释建议：TAD 结构 loop / 调控 NEIGHBOR 基因 | Schwarzer et al. 2017 *Nature*（TAD 边界功能）；eQTL 经典文献 | 接受 |
+
+## 驳回 / 修改的建议
+
+| # | AI 建议 | 驳回 / 修改原因 |
+|---|---|---|
+| A | AI 起初建议"只需要一个 CRISPRi 实验即可得出结论" | 驳回：建议设非靶向 + 阳性对照 + （可选）正交 CRISPR-Cas9 删增强子 |
+| B | AI 把 "Gene Y 高表达" 直接归因为"被该 enhancer 驱动" | 驳回：表达变化可能由其他增强子、转录因子、信号通路等多因素决定；明确写"缺失 = 等位特异性表达 / eQTL / 扰动后变化" |
+
+---
+
+## 5 层整合（输出已写到 docx 表 3）
+
+| Layer | 直接观测 | 生物解读 | 缺失证据 |
+|---|---|---|---|
+| ATAC-seq | 候选区有峰 | 开放 chromatin，可能调控区 | cell-type 对照、SNP footprint、时间序列 |
+| H3K27ac ChIP/CUT&Tag | 候选区有信号 | 活性增强子标记 | H3K4me1 共定位、TF footprint、重复性 |
+| DNA 甲基化（WGBS） | 候选区低甲基化（~10%） | 未被沉默；与活性区一致 | allele-specific 甲基化、动态 |
+| Hi-C / Micro-C | enhancer ↔ Gene Y 启动子 loop | 3D 接触存在 | 区分功能 loop vs 结构 TAD；CRISPRi 扰动 loop |
+| RNA-seq | Gene Y 表达上调 | 可能由该 enhancer 驱动 | 等位特异性表达、eQTL、扰动后变化 |
+
+---
+
+## 已承认的局限
+
+- 5 个 omics 同时满足 = 强假设但不是证明。Hi-C 的 1/3–1/5 接触是结构性 TAD 而非功能性。
+- CRISPRi 在原代细胞中递送 / 重复性可能有挑战；考虑 lentivirus + 多 guide 备份。
+- 单细胞 ATAC + 多组学（10x Multiome、Paired-Tag）能在 cell-level 解析 enhancer-Gene 配对，是更现代但成本高的替代。
+
+---
+
+## 我会问领域专家的开放问题
+
+- 该 cell type 中 CRISPRi 重复性的经验基线是多少？
+- enhancer deletion 和 CRISPRi 在原代细胞上结果是否一致？
+- Hi-C vs Micro-C 在 sub-kb 分辨率上的差异是否会影响 loop calling？

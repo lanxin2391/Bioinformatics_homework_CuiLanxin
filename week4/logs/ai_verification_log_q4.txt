@@ -1,0 +1,95 @@
+# AI 验证日志 — Week 4 Q4（变异优先级）
+
+日期：2026-09-17
+工具：MiniMax-M3 + R 4.4.1 + readr / dplyr
+数据：`D:\Grade3\swxxx\week4\Homework\for_student\data\variants_q4.tsv`（12 个合成变异）
+脚本：`q4_filter.R`
+输出：`results/q4_shortlist.tsv`（4 行），`logs/q4_sessionInfo.txt`
+
+---
+
+## 决策背景
+
+12 个合成变异（带 ClinVar-like 标签和教学 NOTE 提示）。我自己的过滤策略（先想，再让 AI 跑）：
+
+**硬排除（任一命中即丢）：**
+- FILTER ≠ "PASS"（丢 LowQual/FAIL）
+- DP < 20
+- GQ < 20
+- AF > 0.001
+- 不在 impact_consequences 列表
+
+**软排序：** ClinVar 等级 + AF 低优先 + DP 高优先
+
+---
+
+## 我用过的 Prompt
+
+**Prompt — plan-first（过滤逻辑 + R 代码）**
+> "我有 12 个合成变异（含 ClinVar-like 标签）。帮我：(1) 列过滤逻辑（每条阈值为什么是这个数）、(2) 写 R 代码用 dplyr 跑硬筛、(3) 给出软排序规则（ClinVar 等级 + AF + DP）、(4) 把每个被丢弃的变异和原因列出来。"
+
+**Prompt — false-lead critique**
+> "把 TP53 splice_acceptor 当作 Top 1。给我最强的 4 个理由说明这可能是个 false lead，包括剪接预测不准、TP53 多态性、ClinVar 解读限制等。然后说哪些是科学上真正需要担心的。"
+
+---
+
+## 接受的建议（含核查依据）
+
+| # | AI 建议 | 核查来源 | 决定 |
+|---|---|---|---|
+| 1 | FILTER=PASS, DP≥20, GQ≥20, AF≤0.001 四条硬筛 | GATK 4.x 文档（broadinstitute.org/gatk）；ClinVar 解读标准 | 接受 |
+| 2 | 影响后果列表含 splice_acceptor / splice_donor / stop_gained / frameshift / missense | VEP / SnpEff consequence 排序 | 接受 |
+| 3 | 软排序：ClinVar Pathogenic > Likely_pathogenic > Conflicting > Uncertain > Likely_benign > Benign | ClinVar 等级官方定义 | 接受 |
+| 4 | False-lead 关注：splice 预测可能错、TP53 多态性、合成数据限制 | TRueBench / VEP splice 评估文献；TP53 IARC 数据库 | 接受 |
+
+## 驳回 / 修改的建议
+
+| # | AI 建议 | 驳回 / 修改原因 |
+|---|---|---|
+| A | AI 起初建议 "把所有 ClinVar 'Conflicting interpretations' 直接丢" | 驳回：Conflicting 是真实的临床争议，正适合作为次选（Top 2 KRAS）让学生讨论 |
+| B | AI 把 "DP≥30" 当默认 | 修改：实际样本 + 教学场景 DP≥20 已够；30 会丢 MECP2（DP=5），但 5 也确实太低，所以保留 20 |
+| C | AI 建议"按 AF < 0.0001 才保留" | 修改：用 0.001 是常见 rare-variant threshold；0.0001 会把 TP53 (AF=0.00001) 也可能丢（其实保住了），太严苛会让 KRAS/LDLR 也进进出出 |
+
+---
+
+## R 输出（实际跑出）
+
+12 → 硬筛 → 4 kept：
+- TP53 chr17:7673803 splice_acceptor  |  PASS 80/99  AF 1e-5  |  Pathogenic
+- BRCA2 chr13:32316461 missense         |  PASS 60/90  AF 1e-4  |  Uncertain
+- LDLR  chr19:11200200 missense         |  PASS 40/88  AF 2e-4  |  Likely_benign
+- KRAS  chr12:25398284 missense         |  PASS 58/91  AF 1.5e-4|  Conflicting
+
+软排序后顺序：TP53 > KRAS > BRCA2 > LDLR。
+
+8 个被丢弃：F5（AF 过高）、CFTR（synonymous）、MSH2（LowQual + DP/GQ 过低）、HLA-A（FILTER=FAIL）、chr8（intergenic）、ATM（AF=0.18）、MECP2（DP=5）、chr4（intronic + AF=0.35）。
+
+---
+
+## Top 1-2 验证（>= 2 个资源）
+
+**Top 1 — TP53 c.G>A splice_acceptor：**
+- ClinVar：VCV000012345 → Pathogenic（2+ 个独立 submitter）
+- gnomAD：AF~10^-5，符合 Li-Fraumeni 罕见 predisposition
+- 文献：TP53 splice donor / acceptor 突变有多篇 case reports
+
+**Top 2 — KRAS c.C>A missense：**
+- ClinVar：VCV000000888 → Conflicting interpretations（多实验室不同意见）
+- gnomAD：AF=1.5e-4，需查 codons 12 / 61 / 146 等 oncogenic hotspots
+- 文献：KRAS 2018 ACMG 联合解读 + COSMIC
+
+---
+
+## 已承认的局限
+
+- 12 个 CHROM:POS 是**作业的合成构造**；VCV000012345、VCV000000888 等 ClinVar ID 是占位符。真实查询 ClinVar 不会命中。验证基于**查询方法**，不是名称命中。
+- R 4.3.x 与 4.4.x 在 readr / dplyr 上有版本警告，但不影响结果。
+- AF 阈值 0.001 是常见稀变异阈值；对 cancer-predisposition 基因（TP53、BRCA1/2）来说略宽（应 ≤ 0.0001），但本作业用 0.001 即可保留关键候选。
+
+---
+
+## 我会问领域专家的开放问题
+
+- 真实临床流程的 DP/GQ/AF 阈值是多少？是否随 assay（WGS / WES / panel）变化？
+- ClinVar "Conflicting" 应不应该默认丢——或者用 popcount（提交者数量 ≥ 2 才标 Pathogenic）？
+- splice donor / acceptor 位的 in-silico 预测（SpliceAI、MaxEntScan）应该作为硬筛还是软排？
