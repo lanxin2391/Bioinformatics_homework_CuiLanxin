@@ -1,0 +1,5 @@
+CHROM	POS	REF	ALT	FILTER	DP	GQ	AF	GENE	CONSEQUENCE	CLINVAR_SIG	CLINVAR_ID	NOTE
+chr17	7673803	G	A	PASS	80	99	1e-5	TP53	splice_acceptor_variant	Pathogenic	VCV000012345	Annotated near a canonical splice junction
+chr12	25398284	C	A	PASS	58	91	1.5e-4	KRAS	missense_variant	Conflicting_interpretations_of_pathogenicity	VCV000000888	ClinVar conflicting interpretations
+chr13	32316461	C	T	PASS	60	90	1e-4	BRCA2	missense_variant	Uncertain_significance	VCV000067890	Rare missense with uncertain clinical significance
+chr19	11200200	C	T	PASS	40	88	2e-4	LDLR	missense_variant	Likely_benign	VCV000000666	ClinVar Likely_benign
