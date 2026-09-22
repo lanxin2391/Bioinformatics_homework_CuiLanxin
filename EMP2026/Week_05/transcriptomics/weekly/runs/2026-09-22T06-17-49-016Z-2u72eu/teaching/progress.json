@@ -1,0 +1,16 @@
+{
+  "success": true,
+  "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+  "progress": {
+    "passed_quizzes": {
+      "course_transcriptomics::s1_import": "2026-09-22T13:49:27.649+0800",
+      "course_transcriptomics::s2_prepare": "2026-09-22T13:50:48.228+0800",
+      "course_transcriptomics::s3_analysis": "2026-09-22T13:52:12.442+0800",
+      "course_transcriptomics::s4_visualization": "2026-09-22T13:56:04.001+0800",
+      "course_transcriptomics::s5_interpretation": "2026-09-22T13:57:59.831+0800"
+    },
+    "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+    "updated_at": "2026-09-22T13:57:59.831+0800"
+  },
+  "reflections": []
+}
