@@ -1,0 +1,1339 @@
+{
+  "success": true,
+  "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+  "events": [
+    {
+      "event_type": "api_call",
+      "path": "/import",
+      "method": "POST",
+      "total_ms": 7350,
+      "backend_ms": 5418.1,
+      "case_id": "course_microbiome_16s",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T11:31:59.544+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 48,
+      "backend_ms": 4.8,
+      "case_id": "course_microbiome_16s",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T11:31:59.683+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 37,
+      "backend_ms": 1.1,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T11:32:00.886+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 793,
+      "backend_ms": 1.2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T11:39:17.918+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 112,
+      "backend_ms": 1.4,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:30:51.442+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 36,
+      "backend_ms": 1.2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:31:12.877+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/filter",
+      "method": "POST",
+      "total_ms": 11261,
+      "backend_ms": 11196.1,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:38:25.095+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 71,
+      "backend_ms": 2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:38:25.167+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:04.566+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:06.963+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/import/demo",
+      "method": "POST",
+      "total_ms": 8229,
+      "backend_ms": 8117.5,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:18.977+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 39,
+      "backend_ms": 3.9,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:19.062+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 31,
+      "backend_ms": 1.9,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:19.253+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 75,
+      "backend_ms": 1.3,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:47.236+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 28,
+      "backend_ms": 1.2,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:44:53.786+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/filter",
+      "method": "POST",
+      "total_ms": 11583,
+      "backend_ms": 11514,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:45:09.342+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 80,
+      "backend_ms": 3.7,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:45:09.409+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/normalize",
+      "method": "POST",
+      "total_ms": 11577,
+      "backend_ms": 11512.5,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:45:29.782+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 78,
+      "backend_ms": 1.9,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:45:29.854+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/analyze/differential",
+      "method": "POST",
+      "total_ms": 23740,
+      "backend_ms": 23655,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:46:23.280+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 12681,
+      "backend_ms": 8220.2,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:46:23.337+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 150,
+      "backend_ms": 2.6,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:46:55.942+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 224,
+      "backend_ms": 168.8,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:46:56.152+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 44,
+      "backend_ms": 3.3,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:46:56.202+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:47:16.046+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:47:23.333+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s1_import",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:49:27.651+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s1_import",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:49:27.686+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:49:27.830+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:49:28.027+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s2_prepare",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:50:48.233+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s2_prepare",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:50:48.269+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:50:48.389+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:50:48.543+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s3_analysis",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:52:12.444+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s3_analysis",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:52:12.483+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:52:12.610+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:52:12.775+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s4_visualization",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:56:04.003+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s4_visualization",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:56:04.041+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:56:04.189+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:56:04.421+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s5_interpretation",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:57:59.834+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_transcriptomics",
+      "task_id": "s5_interpretation",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:57:59.870+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:57:59.993+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:58:00.194+0800"
+    },
+    {
+      "event_type": "task_navigate",
+      "case_id": "course_transcriptomics",
+      "task_page": "preparation",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:58:11.703+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 130,
+      "backend_ms": 2.6,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:58:11.743+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 162,
+      "backend_ms": 1.5,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T13:59:13.710+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/analyze/differential",
+      "method": "POST",
+      "total_ms": 9747,
+      "backend_ms": 9621.5,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:00:36.278+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/analyze/enrichment/async",
+      "method": "POST",
+      "total_ms": 100,
+      "backend_ms": 68.5,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:01:42.612+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/analyze/enrichment/async",
+      "method": "POST",
+      "total_ms": 129,
+      "backend_ms": 71.6,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:02:09.552+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 8204,
+      "backend_ms": 8155,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:02:56.970+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 7837,
+      "backend_ms": 7810,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:05:48.530+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/volcano",
+      "method": "POST",
+      "total_ms": 4806,
+      "backend_ms": 4705.8,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:05:53.340+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 7630,
+      "backend_ms": 7587.9,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:06:45.653+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 7958,
+      "backend_ms": 7927.4,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:07:33.847+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 12918,
+      "backend_ms": 8048.2,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:07:33.916+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/llm/openrouter_verified",
+      "method": "GET",
+      "total_ms": 1335,
+      "backend_ms": 30.8,
+      "case_id": "course_microbiome_16s",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:25.833+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 373,
+      "backend_ms": 170.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:26.678+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 31,
+      "backend_ms": 2.8,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:29.570+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:30.007+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/import/demo",
+      "method": "POST",
+      "total_ms": 7280,
+      "backend_ms": 7205.2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:41.978+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 31,
+      "backend_ms": 2.8,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:42.099+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 51,
+      "backend_ms": 24.3,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:42.371+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 157,
+      "backend_ms": 2.2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:14:58.362+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:15:12.804+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:15:14.574+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 178,
+      "backend_ms": 143.2,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:15:18.928+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 27,
+      "backend_ms": 1.6,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:15:19.042+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 102,
+      "backend_ms": 6.5,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:15:26.716+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/barplot",
+      "method": "POST",
+      "total_ms": 3896,
+      "backend_ms": 3854,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T14:17:26.846+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/llm/openrouter_verified",
+      "method": "GET",
+      "total_ms": 1054,
+      "backend_ms": 124.5,
+      "case_id": "course_transcriptomics",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T18:28:41.765+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 581,
+      "backend_ms": 508.5,
+      "case_id": "course_transcriptomics",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-22T18:28:43.140+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/llm/openrouter_verified",
+      "method": "GET",
+      "total_ms": 1401,
+      "backend_ms": 67.6,
+      "case_id": "course_transcriptomics",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:39:55.501+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 556,
+      "backend_ms": 455.7,
+      "case_id": "course_transcriptomics",
+      "experiment": null,
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:39:56.653+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 32,
+      "backend_ms": 4.8,
+      "case_id": "course_transcriptomics",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:40:00.309+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_transcriptomics",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:40:16.376+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:40:17.767+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:40:37.231+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/import",
+      "method": "POST",
+      "total_ms": 7289,
+      "backend_ms": 5327.1,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:41:48.286+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 129,
+      "backend_ms": 76.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:41:48.498+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/RNAseq_output",
+      "method": "GET",
+      "total_ms": 61,
+      "backend_ms": 28.7,
+      "case_id": "course_microbiome_16s",
+      "experiment": "RNAseq_output",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:41:48.910+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level_7",
+      "method": "GET",
+      "total_ms": 250,
+      "backend_ms": 2.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:42:49.324+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/filter",
+      "method": "POST",
+      "total_ms": 21848,
+      "backend_ms": 14312.5,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:43:19.768+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level_7",
+      "method": "GET",
+      "total_ms": 1045,
+      "backend_ms": 90.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T15:43:21.450+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/barplot",
+      "method": "POST",
+      "total_ms": 4122,
+      "backend_ms": 4041.7,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:02:09.616+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/boxplot",
+      "method": "POST",
+      "total_ms": 2093,
+      "backend_ms": 2019.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:02:39.353+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/heatmap",
+      "method": "POST",
+      "total_ms": 1724,
+      "backend_ms": 1670.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:02:53.580+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/scatter",
+      "method": "POST",
+      "total_ms": 6597,
+      "backend_ms": 6497.2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:03:18.904+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/structure",
+      "method": "POST",
+      "total_ms": 2738,
+      "backend_ms": 2657.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:03:34.129+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/visualize/alpha",
+      "method": "POST",
+      "total_ms": 1876,
+      "backend_ms": 1804.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:03:42.752+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:06:10.664+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:06:11.816+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/analyze/differential/async",
+      "method": "POST",
+      "total_ms": 181,
+      "backend_ms": 145.8,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:18:17.981+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:33:49.262+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level_7",
+      "method": "GET",
+      "total_ms": 62,
+      "backend_ms": 4.8,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:33:53.458+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/import",
+      "method": "POST",
+      "total_ms": 6405,
+      "backend_ms": 5074.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:36:18.220+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/clinical/vars_standalone/jqj2e5QvC8FqM1JohX11mFzu",
+      "method": "GET",
+      "total_ms": 139,
+      "backend_ms": 102.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:36:18.421+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level_7",
+      "method": "GET",
+      "total_ms": 27,
+      "backend_ms": 1.7,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level_7",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:36:18.685+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level",
+      "method": "GET",
+      "total_ms": 178,
+      "backend_ms": 0.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:36:28.427+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/filter",
+      "method": "POST",
+      "total_ms": 4483,
+      "backend_ms": 3926.4,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:36:39.411+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level",
+      "method": "GET",
+      "total_ms": 215,
+      "backend_ms": 1.4,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:36:39.774+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/normalize",
+      "method": "POST",
+      "total_ms": 5495,
+      "backend_ms": 4882.5,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:37:51.566+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level",
+      "method": "GET",
+      "total_ms": 220,
+      "backend_ms": 2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:37:51.923+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/rarefy",
+      "method": "POST",
+      "total_ms": 4523,
+      "backend_ms": 4488.4,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:38:00.982+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level",
+      "method": "GET",
+      "total_ms": 63,
+      "backend_ms": 2,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:38:01.141+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 4250,
+      "backend_ms": 4221.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:39:15.752+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/use_snapshot",
+      "method": "POST",
+      "total_ms": 7368,
+      "backend_ms": 4340.6,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:39:15.782+0800"
+    },
+    {
+      "event_type": "api_call",
+      "path": "/prepare/snapshots/jqj2e5QvC8FqM1JohX11mFzu/16S_level",
+      "method": "GET",
+      "total_ms": 6227,
+      "backend_ms": 1.9,
+      "case_id": "course_microbiome_16s",
+      "experiment": "16S_level",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T16:39:15.811+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:14:16.629+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s1_import",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:07.790+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s1_import",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:07.852+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:08.111+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:08.503+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s2_prepare",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:47.582+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s2_prepare",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:47.663+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:47.913+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:15:49.706+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s3_analysis",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:16:36.844+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s3_analysis",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:16:36.894+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:16:37.140+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:16:37.453+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s4_visualization",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:16.915+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s4_visualization",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:16.965+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:17.130+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:17.405+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s5_interpretation",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:57.195+0800"
+    },
+    {
+      "event_type": "quiz_pass",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s5_interpretation",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:57.248+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:57.470+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:17:57.766+0800"
+    },
+    {
+      "event_type": "reflection_submit",
+      "case_id": "course_microbiome_16s",
+      "task_id": "s5_interpretation",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:21:13.629+0800"
+    },
+    {
+      "event_type": "case_open",
+      "case_id": "course_microbiome_16s",
+      "user_id": "jqj2e5QvC8FqM1JohX11mFzu",
+      "role": "local",
+      "ts": "2026-09-24T17:21:13.884+0800"
+    }
+  ]
+}

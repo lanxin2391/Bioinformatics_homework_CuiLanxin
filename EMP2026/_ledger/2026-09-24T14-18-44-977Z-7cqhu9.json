@@ -1,0 +1,17 @@
+{
+  "event": "sync",
+  "synced_at": "2026-09-24T14:18:53Z",
+  "student_id": "SUAT24000118",
+  "display_name": "崔澜馨",
+  "emp_version": "0.2.8.9",
+  "github_login": "lanxin2391",
+  "github_repo": "lanxin2391/Bioinformatics_homework_CuiLanxin",
+  "github_branch": "main",
+  "week_dir": "Week_06",
+  "track": "microbiome_16s",
+  "assignment_type": "weekly",
+  "assignment_id": "week_06",
+  "assignment_title": "第6周",
+  "git_path": "EMP2026/Week_06/microbiome_16s/weekly/runs/2026-09-24T14-18-44-977Z-7cqhu9",
+  "run_id": "2026-09-24T14-18-44-977Z-7cqhu9"
+}
